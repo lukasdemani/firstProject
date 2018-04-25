@@ -1,0 +1,44 @@
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+var schema = new Schema({
+	number: {
+		type: String,
+		required: true,
+	},
+
+	createDate: {
+		type: Date,
+		required: true,
+		default: Date.now
+	},
+
+	status: {
+		type: String,
+		required: true,
+		enum: ['created', 'done'],
+		default: 'created'
+	},
+
+	customer: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'Customer'
+	},
+
+	items: [{
+		quantity: {
+			type: String,
+			required: true,
+		},
+		price: {
+			type: Number,
+			required: true
+		},
+		product: {
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'Product'
+		}
+	}],
+});
+
+module.exports = mongoose.model('Order', schema);

@@ -1,0 +1,135 @@
+body{
+  font-family: Raleway;
+  color: #555;
+  background: #98fb98;
+  margin: 10px 30px;
+}
+
+#wrap{
+	width: 960px;
+	margin: auto;
+	background: white;
+}
+
+#menuline{
+	width: 960px;
+	margin: auto;
+	padding-right: 0px
+}
+a {
+	text-decoration: none;
+	color: black;
+	padding-left: 20px;
+}
+header nav ul{
+	margin: auto;
+	text-align: center;
+	list-style: none;
+	padding-left: 20px
+}
+
+header nav ul li{
+	display: inline-block;
+}
+#homepage{
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 10px 20px;
+  background: #fdfdfd;
+  border-radius: 4px;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+}
+
+
+input[type="text"]{
+	display: block;
+	width: 300px;
+	margin: 20px 0;
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid #ddd;
+}
+
+label{
+	font-weight: bold;
+}
+
+.title{
+	margin: auto;
+	width: 300px;
+	color: black;
+	text-align: center;
+	font-size: 48px;
+}
+
+#login{
+	padding-left: 70px;
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	left: 900px;
+}
+#login button{
+	font-size: 18px;
+}
+#login entrar{
+	padding-right: 20px;
+}
+#homepage h1{
+	text-align: center;
+}
+
+form{
+	max-width: 350px;
+	margin: 30px auto;
+}
+
+input[type=submit]{
+	background: #555;
+	color: #fff;
+	border: 0;
+	padding: 10px;
+	font-size: 18px;
+	width: 200px;
+	margin: 0 auto;
+	display: block;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+span{
+	display: inline-block;
+	margin: 0 20px;
+}
+
+span.dist{
+	color: green;
+	float: right;
+}
+
+span.true{
+	border-radius: 10px;
+	width: 10px;
+	height: 10px;
+	background: green;
+}
+
+span.false{
+	border-radius: 10px;
+	width: 10px;
+	height: 10px;
+	background: #ff5252;
+}
+
+button{
+	float: right;
+	background: green;
+	border: 0;
+	padding: 5px 10px;
+	color: #fff;
+	display: inline-block;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button.false{display:none;}
