@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html>
-<script type="text/javascript" src="./cadastrar.js"></script>
+<html ng-app="customers">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+
 <head>
 	<title>Fit and Fast</title>
+
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+	<script src="./cadastrar.js" type="text/javascript"></script>
+
 </head>
-<body>
+<body ng-controller="cadastro">
+	<div id="form">
 	<form id="dados">
-		Nome: <input type="text" id="idname">
-		E-mail: <input type="text" id="idemail">
-		Senha: <input type="text" id="idsenha">
-		<button name="Enviar" onclick="oi();" >
+		Nome: <input type="text" ng-model=cliente.name id="idname" alt="Nome">
+		E-mail: <input type="text" ng-model=cliente.email id="idemail" alt="E-mail">
+		Senha: <input type="text" ng-model=cliente.password id="idsenha" alt="Senha">
 	</form>
+	<button class="btn btn-primary btn-block" ng-click="adicionarCliente(cliente)" ng-disabled="contatoForm.$invalid">Registrar</button>
+	</div>
+	<div >
+		{{msg}}
+	</div>
 </body>
 </html>

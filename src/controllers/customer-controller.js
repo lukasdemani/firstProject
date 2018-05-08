@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Customer = mongoose.model('Customer');
-var ValidationContract = require ('../validators/validator');
+//var ValidationContract = require ('../validators/validator');
 var repository = require('../repositories/customer-repository');
 
 exports.get = (req, res,next) => {
@@ -14,7 +14,7 @@ exports.get = (req, res,next) => {
 }
 
 exports.post = (req, res, next) => {
-	var contract = new ValidationContract();
+	/*var contract = new ValidationContract();
 	contract.hasMinLen(req.body.name, 3, 'O título de ter 3 caracteres');
 	contract.hasMinLen(req.body.email, 3, 'O slug de ter 3 caracteres');
 	contract.hasMinLen(req.body.password, 3, 'A descrição de ter 3 caracteres');
@@ -23,7 +23,7 @@ exports.post = (req, res, next) => {
 		res.status(400).send(contract.errors()).end();
 		return;
 	}
-
+*/
 	repository
 		.create(req.body)
 		.then(x => {

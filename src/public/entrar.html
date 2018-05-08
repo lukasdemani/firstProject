@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="customers">
 <head>
 	<title>Fit and Fast</title>
+
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+	<script src="./teste.js" type="text/javascript"></script>
 </head>
-<body>
+<body ng-controller="cadastro">
 	<form>
-		E-mail: <input type="text" name="email">
-		Senha: <input type="text" name="senha">
-		<input type="submit" name="Enviar">
+		E-mail: <input type="text" ng-model=cliente.email name="email">
+		Senha: <input type="text" ng-model=cliente.password name="senha">
 	</form>
+	<button class="btn btn-primary btn-block" ng-click="verificarCliente(cliente)" ng-disabled="contatoForm.$invalid">Entrar</button>
+	<div >
+		{{msg}}
+	</div>
 </body>
 </html>
